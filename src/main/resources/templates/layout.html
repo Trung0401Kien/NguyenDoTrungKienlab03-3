@@ -31,6 +31,10 @@
                     <li class="nav-item">
                         <a href="/books/add"  class="btn btn-outline">Add Book</a>
                     </li>
+                    <li class="nav-item"><a href="/categories"  class="nav-link">List Category</a>
+                    </li>
+                    <li class="nav-item"><a href="/categories/add"  class="nav-link">Add Category</a>
+                    </li>
                     <li sec:authorize="isAuthenticated()" class="nav-item">
                         <form th:action="@{/logout}" method="post">
                             <button class="btn btn-danger" type="submit">Logout</button>

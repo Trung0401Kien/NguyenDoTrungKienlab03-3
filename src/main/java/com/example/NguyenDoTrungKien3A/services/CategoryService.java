@@ -28,5 +28,6 @@ public class CategoryService {
     {
         categoryRepository.deleteById(id);
     }
+    public void updateCategory(Category category){categoryRepository.save(category);}
 
 }

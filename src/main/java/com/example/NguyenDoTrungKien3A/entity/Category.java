@@ -2,10 +2,13 @@ package com.example.NguyenDoTrungKien3A.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
-
+@Getter
+@Setter
 @Data
 @Entity
 @Table(name = "category")

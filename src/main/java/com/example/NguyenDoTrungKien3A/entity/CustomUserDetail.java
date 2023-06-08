@@ -9,7 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Arrays;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 
@@ -23,8 +22,8 @@ public class CustomUserDetail implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.stream(userRepository.getRolesOfUser(user.getId())) Stream<String>
-        .map(SimpleGrantedAuthority::new) Stream<SimpleGrantedAuthority>
+        return Arrays.stream(userRepository.getRolesOfUser(user.getId()))
+        .map(SimpleGrantedAuthority::new)
         .collect(Collectors.toSet());
     }
 

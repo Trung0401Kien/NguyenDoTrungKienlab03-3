@@ -1,4 +1,4 @@
-package com.example.NguyenDoTrungKien3A;
+package com.example.NguyenDoTrungKien3A.controller;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
@@ -14,10 +14,10 @@ import java.util.Optional;
 public class CustomErrorController implements ErrorController {
 
     @GetMapping
-    public String handleError(HttpServletRequest request){
-        return Optional.ofNullable(request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE)
-                .filter(status -> Integer.parseInt(status.toString())= 404)
+    public String handleError(HttpServletRequest request) {
+        return Optional.ofNullable(request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE))
+                .filter(status -> Integer.parseInt(status.toString()) == 404)
                 .map(status -> "error/404")
-                .orElse(null));
+                .orElse(null);
     }
 }

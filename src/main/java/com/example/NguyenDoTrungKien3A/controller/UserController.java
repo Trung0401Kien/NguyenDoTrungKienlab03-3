@@ -1,4 +1,4 @@
-package com.example.NguyenDoTrungKien3A;
+package com.example.NguyenDoTrungKien3A.controller;
 
 import com.example.NguyenDoTrungKien3A.entity.User;
 import com.example.NguyenDoTrungKien3A.services.UserService;
